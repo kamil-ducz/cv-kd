@@ -29,6 +29,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/cv-kd/",
               "budgets": [
                 {
                   "type": "initial",

@@ -1,0 +1,125 @@
+<button class="lang-switcher" (click)="toggleLanguage()">
+  {{ isEnglish ? '🌐 Zmień na Polski' : '🌐 Switch to English' }}
+</button>
+
+<div class="cv-container">
+  
+  <!-- LEWA KOLUMNA: Dane, Projekty, Technologie -->
+  <aside class="sidebar">
+    <h1>Kamil Duczakowski</h1>
+    <div class="title">.NET Developer</div>
+    
+    <div class="sidebar-section">
+      <h2>{{ isEnglish ? 'Contact' : 'Kontakt' }}</h2>
+      <div class="contact-item">📧 <a href="mailto:kamilducz1989@gmail.com">kamilducz1989@gmail.com</a></div>
+      <div class="contact-item">📞 +48 531 322 074</div>
+      <div class="contact-item">🌐 <a href="https://linkedin.com" target="_blank">{{ isEnglish ? 'LinkedIn Profile' : 'Profil na LinkedIn' }}</a></div>
+      <div class="contact-item">📍 {{ isEnglish ? 'Tychy, Poland (Remote OK)' : 'Tychy, Polska (Zdalnie OK)' }}</div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Stos Technologiczny</h2>
+      <span class="tech-tag">C# / .NET</span>
+      <span class="tech-tag">REST API</span>
+      <span class="tech-tag">Postman</span>
+      <span class="tech-tag">MS SQL Server</span>
+      <span class="tech-tag">T-SQL</span>
+      <span class="tech-tag">Git</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">PowerShell</span>
+      <span class="tech-tag">Crystal Reports</span>
+      <span class="tech-tag">Azure DevOps</span>
+      <span class="tech-tag">Jira / ServiceNow</span>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Projekty</h2>
+      <div class="project-item">
+        <h3>Kanban Board</h3>
+        <div class="contact-item">🔗 <a href="https://github.io" target="_blank">Live Demo</a></div>
+      </div>
+      <div class="project-item">
+        <h3>Contact List</h3>
+        <div class="contact-item">🔗 <a href="https://github.io" target="_blank">Live Demo</a></div>
+      </div>
+      <div class="project-item">
+        <h3>YouTube Summaries</h3>
+        <div class="contact-item">📁 <a href="https://github.com" target="_blank">GitHub Repo</a></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>Certyfikaty / Inne</h2>
+      <div class="contact-item">📜 <a href="https://efset.org" target="_blank">English C1 Certificate</a></div>
+      <div class="contact-item">☁️ Azure DevOps (AZ-900)</div>
+      <div class="contact-item">🗣️ Toastmasters International</div>
+    </div>
+  </aside>
+
+  <!-- PRAWA KOLUMNA: Doświadczenie, Edukacja -->
+  <main class="main-content">
+    
+    <section class="main-section">
+      <h2>Podsumowanie</h2>
+      <p>Inżynier IT z ponad 8-letnim doświadczeniem w branży, w tym 3 lata dedykowane wsparciu backendu .NET oraz automatyzacji testów. Doświadczony w migracji systemów, optymalizacji baz danych i utrzymaniu systemów krytycznych dla biznesu.</p>
+    </section>
+
+    <section class="main-section">
+      <h2>Doświadczenie Zawodowe</h2>
+      
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">.NET Developer & Backend Automation Tester</span>
+          <span class="job-date">2023-11 - 2025-07</span>
+        </div>
+        <div class="job-company">Banqsoft, Gdańsk</div>
+        <ul class="job-desc">
+          <li>Rozwój i refaktoryzacja funkcjonalności backendowych oraz testów automatycznych w C# w rozproszonych systemach finansowych enterprise.</li>
+          <li>Analiza i transformacja logów aplikacji do klas C# (zarówno ręcznie, jak i przy użyciu własnych promptów AI).</li>
+          <li>Projektowanie, wdrażanie oraz utrzymanie wewnętrznych paczek NuGet używanych przez wiele zespołów deweloperskich.</li>
+          <li>Migracja wspólnej infrastruktury repozytoriów kodu z wersji .NET 6 do .NET 8.</li>
+          <li>Lokalna konfiguracja środowisk i usług płatniczych przy użyciu Dockera na potrzeby uruchamiania testów.</li>
+          <li>Zarządzanie krytycznymi modułami raportowymi (Crystal Reports) oraz praca z potokami Azure CI/CD.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">.NET Application Support</span>
+          <span class="job-date">2022-03 - 2023-05</span>
+        </div>
+        <div class="job-company">Objectivity, Wrocław</div>
+        <ul class="job-desc">
+          <li>Udział w migracji produkcyjnego systemu legacy z wersji .NET 4.8 do .NET 6.</li>
+          <li>Analiza, reprodukcja oraz wdrażanie poprawek błędów (bug fixing) w warstwie backendowej C# pod okiem seniorów.</li>
+          <li>Diagnoza baz danych – monitorowanie i raportowanie czasów wykonywania zapytań SQL przed i po migracji dla wyższego managementu.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">L3 SQL Server Support Engineer (DBA Team)</span>
+          <span class="job-date">2019-06 - 2022-03</span>
+        </div>
+        <div class="job-company">Fujitsu GDC Poland, Katowice</div>
+        <ul class="job-desc">
+          <li>Obsługa zgłoszeń technicznych oraz alertów bazodanowych od P1 do P5 zgodnie z rygorystycznymi umowami SLA.</li>
+          <li>Tworzenie dokumentacji technicznej zmian architektonicznych (TAD, TCR) i zgodności bankowej.</li>
+          <li>Utrzymanie infrastruktury bazodanowej – wykonywanie skryptów T-SQL, konfiguracja zadań SQL Agent, instalacja i aktualizacja instancji SQL Server.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <h2>Edukacja</h2>
+      <div class="edu-item">
+        <div class="job-header">
+          <span class="job-title">Informatyka — Tytuł Inżyniera</span>
+          <span class="job-date">2016-11 - 2020-12</span>
+        </div>
+        <div class="job-company">Wyższa Szkoła Technologii Informatycznych (WSTI), Katowice</div>
+      </div>
+    </section>
+
+  </main>
+</div>
