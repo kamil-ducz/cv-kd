@@ -18,7 +18,7 @@
     </div>
 
     <div class="sidebar-section">
-      <h2>Stos Technologiczny</h2>
+      <h2>{{ isEnglish ? 'Tech stack' : 'Stos Technologiczny' }}</h2>
       <span class="tech-tag">C# / .NET</span>
       <span class="tech-tag">REST API</span>
       <span class="tech-tag">Postman</span>
@@ -33,25 +33,36 @@
     </div>
 
     <div class="sidebar-section">
-      <h2>Projekty</h2>
+      <h2>{{ isEnglish ? 'Projects' : 'Projekty' }}</h2>
       <div class="project-item">
         <h3>Kanban Board</h3>
-        <div class="contact-item">🔗 <a href="https://github.io" target="_blank">Live Demo</a></div>
+        <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/obj-todolist" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
+        <div class="contact-item">🔗 <a href="https://kamil-ducz.github.io/obj-todolist/login" target="_blank">{{ isEnglish ? 'Live demo' : 'Demo na żywo' }}</a></div>
       </div>
       <div class="project-item">
         <h3>Contact List</h3>
-        <div class="contact-item">🔗 <a href="https://github.io" target="_blank">Live Demo</a></div>
+        <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/ContactList" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
       </div>
       <div class="project-item">
         <h3>YouTube Summaries</h3>
-        <div class="contact-item">📁 <a href="https://github.com" target="_blank">GitHub Repo</a></div>
+        <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/YouTubeSummaries" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
       </div>
     </div>
 
     <div class="sidebar-section">
-      <h2>Certyfikaty / Inne</h2>
-      <div class="contact-item">📜 <a href="https://efset.org" target="_blank">English C1 Certificate</a></div>
-      <div class="contact-item">☁️ Azure DevOps (AZ-900)</div>
+      <h2>{{ isEnglish ? 'Certificates' : 'Certyfikaty' }}</h2>
+      <div class="project-item">
+        <h3>📜 English C1</h3>
+        <div class="contact-item"><a href="https://cert.efset.org/en/XpYASx" target="_blank">🔗{{ isEnglish ? 'Certificate link' : 'Link do certyfikatu' }}</a></div>
+      </div>
+      <div class="project-item">
+        <h3>☁️ Azure DevOps (AZ-900)</h3>
+      <div class="contact-item">🔗 <a href="https://drive.google.com/file/d/1lSBFNwnYRmvew01slGauaShIhodvlDCD/view?usp=sharing" target="_blank">{{ isEnglish ? 'Certificate link' : 'Link do certyfikatu' }}</a></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h2>{{ isEnglish ? 'Soft Skills' : 'Umiejętności Miękkie' }}</h2>
       <div class="contact-item">🗣️ Toastmasters International</div>
     </div>
   </aside>
@@ -60,12 +71,19 @@
   <main class="main-content">
     
     <section class="main-section">
-      <h2>Podsumowanie</h2>
-      <p>Inżynier IT z ponad 8-letnim doświadczeniem w branży, w tym 3 lata dedykowane wsparciu backendu .NET oraz automatyzacji testów. Doświadczony w migracji systemów, optymalizacji baz danych i utrzymaniu systemów krytycznych dla biznesu.</p>
+      <h2>{{ isEnglish ? 'Professional summary' : 'Podsumowanie zawodowe' }}</h2>
+      @if (isEnglish) {
+        <p>IT Engineer with over 8 years of experience, including 3 years in .NET backend support and
+automation testing. Experienced in system migration, database optimization, and the maintenance of business-critical systems.
+</p>
+      }
+      @else {
+        <p>Inżynier IT z ponad 8-letnim doświadczeniem w branży, w tym 3 lata dedykowane wsparciu backendu .NET oraz automatyzacji testów. Doświadczony w migracji systemów, optymalizacji baz danych i utrzymaniu systemów krytycznych dla biznesu.</p>
+      }
     </section>
 
     <section class="main-section">
-      <h2>Doświadczenie Zawodowe</h2>
+      <h2>{{ isEnglish ? 'Professional experience' : 'Doświadczenie zawodowe' }}</h2>
       
       <div class="job-item">
         <div class="job-header">
@@ -73,7 +91,18 @@
           <span class="job-date">2023-11 - 2025-07</span>
         </div>
         <div class="job-company">Banqsoft, Gdańsk</div>
-        <ul class="job-desc">
+        @if (isEnglish) {
+          <ul class="job-desc">
+            <li>Development and refactoring of backend functionalities and automated tests in C# within distributed enterprise financial systems.</li>
+            <li>Analysis and transformation of application logs into C# classes (both manually and using custom AI prompts).</li>
+            <li>Designing, implementing, and maintaining internal NuGet packages used by multiple development teams.</li>
+            <li>Migrating shared code repository infrastructure from .NET 6 to .NET 8.</li>
+            <li>Local configuration of payment environments and services using Docker for test execution purposes.</li>
+            <li>Managing critical reporting modules (Crystal Reports) and working with Azure CI/CD pipelines.</li>
+          </ul>
+        }
+        @else {
+          <ul class="job-desc">
           <li>Rozwój i refaktoryzacja funkcjonalności backendowych oraz testów automatycznych w C# w rozproszonych systemach finansowych enterprise.</li>
           <li>Analiza i transformacja logów aplikacji do klas C# (zarówno ręcznie, jak i przy użyciu własnych promptów AI).</li>
           <li>Projektowanie, wdrażanie oraz utrzymanie wewnętrznych paczek NuGet używanych przez wiele zespołów deweloperskich.</li>
@@ -81,6 +110,8 @@
           <li>Lokalna konfiguracja środowisk i usług płatniczych przy użyciu Dockera na potrzeby uruchamiania testów.</li>
           <li>Zarządzanie krytycznymi modułami raportowymi (Crystal Reports) oraz praca z potokami Azure CI/CD.</li>
         </ul>
+        }
+        
       </div>
 
       <div class="job-item">
@@ -89,11 +120,20 @@
           <span class="job-date">2022-03 - 2023-05</span>
         </div>
         <div class="job-company">Objectivity, Wrocław</div>
+        @if (isEnglish) {
+          <ul class="job-desc">
+            <li>Participation in the migration of a production legacy system from .NET 4.8 to .NET 6.</li>
+            <li>Analysis, reproduction, and implementation of bug fixes in the C# backend layer under the supervision of senior developers.</li>
+            <li>Database diagnostics – monitoring and reporting SQL query execution times before and after migration for higher management.</li>
+          </ul>
+        }
+        @else {
         <ul class="job-desc">
           <li>Udział w migracji produkcyjnego systemu legacy z wersji .NET 4.8 do .NET 6.</li>
           <li>Analiza, reprodukcja oraz wdrażanie poprawek błędów (bug fixing) w warstwie backendowej C# pod okiem seniorów.</li>
           <li>Diagnoza baz danych – monitorowanie i raportowanie czasów wykonywania zapytań SQL przed i po migracji dla wyższego managementu.</li>
         </ul>
+      }
       </div>
 
       <div class="job-item">
@@ -102,22 +142,31 @@
           <span class="job-date">2019-06 - 2022-03</span>
         </div>
         <div class="job-company">Fujitsu GDC Poland, Katowice</div>
+        @if (isEnglish) {
+          <ul class="job-desc">
+            <li>Handling technical tickets and database alerts from P1 to P5 in accordance with strict SLA agreements.</li>
+            <li>Creating technical documentation for architectural changes (TAD, TCR) and banking compliance.</li>
+            <li>Maintaining database infrastructure – executing T-SQL scripts, configuring SQL Agent jobs, installing and updating SQL Server instances.</li>
+          </ul>
+        }
+        @else {
         <ul class="job-desc">
           <li>Obsługa zgłoszeń technicznych oraz alertów bazodanowych od P1 do P5 zgodnie z rygorystycznymi umowami SLA.</li>
           <li>Tworzenie dokumentacji technicznej zmian architektonicznych (TAD, TCR) i zgodności bankowej.</li>
           <li>Utrzymanie infrastruktury bazodanowej – wykonywanie skryptów T-SQL, konfiguracja zadań SQL Agent, instalacja i aktualizacja instancji SQL Server.</li>
         </ul>
+      }
       </div>
     </section>
 
     <section class="main-section">
-      <h2>Edukacja</h2>
+      <h2>{{ isEnglish ? "Education" : "Edukacja" }}</h2>
       <div class="edu-item">
         <div class="job-header">
-          <span class="job-title">Informatyka — Tytuł Inżyniera</span>
+          <span class="job-title">{{ isEnglish ? "Computer Science — Bachelor's Degree" : "Informatyka — Tytuł Inżyniera" }}</span>
           <span class="job-date">2016-11 - 2020-12</span>
         </div>
-        <div class="job-company">Wyższa Szkoła Technologii Informatycznych (WSTI), Katowice</div>
+        <div class="job-company">{{ isEnglish ? "Higher School of Computer Science (WSTI), Katowice" : "Wyższa Szkoła Technologii Informatycznych (WSTI), Katowice" }}</div>
       </div>
     </section>
 
