@@ -47,6 +47,14 @@
         <h3>YouTube Summaries</h3>
         <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/YouTubeSummaries" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
       </div>
+      <div class="project-item">
+        <h3>Polish DB</h3>
+        <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/PolishDB" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
+      </div>
+      <div class="project-item">
+        <h3>Academy</h3>
+        <div class="contact-item">📁 <a href="https://github.com/kamil-ducz/obj-academy" target="_blank">{{ isEnglish ? 'Repository' : 'Repozytorium' }}</a></div>
+      </div>
     </div>
 
     <div class="sidebar-section">
@@ -63,7 +71,7 @@
 
     <div class="sidebar-section">
       <h2>{{ isEnglish ? 'Soft Skills' : 'Umiejętności Miękkie' }}</h2>
-      <div class="contact-item">🗣️ Toastmasters International</div>
+      <div class="contact-item">🗣️ Toastmasters International active member</div>
     </div>
   </aside>
 
@@ -157,10 +165,53 @@ automation testing. Experienced in system migration, database optimization, and 
         </ul>
       }
       </div>
-    </section>
 
-    <section class="main-section">
-      <h2>{{ isEnglish ? "Education" : "Edukacja" }}</h2>
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">Application Support Engineer</span>
+          <span class="job-date">2018-06 - 2019-06</span>
+        </div>
+        <div class="job-company">Diebold Nixdorf, Katowice</div>
+        @if (isEnglish) {
+          <ul class="job-desc">
+            <li>Test Execution: Maintained and executed automated test scripts using an internal .NET Core framework.</li>
+            <li>Bug Verification: Collaborated with senior engineering teams to reproduce software bugs and validate system hotfixes</li>
+          </ul>
+        }
+        @else {
+        <ul class="job-desc">
+          <li>Wykonywanie testów: Utrzymywanie i wykonywanie zautomatyzowanych skryptów testowych z wykorzystaniem wewnętrznego środowiska .NET Core.</li>
+          <li>Weryfikacja błędów: Współpraca z doświadczonymi zespołami inżynierów w celu odtworzenia błędów oprogramowania i weryfikacji poprawek systemowych</li>
+        </ul>
+      }
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <span class="job-title">IT Support & Infrastructure Technician</span>
+          <span class="job-date">2016-12 - 2018-04</span>
+        </div>
+        <div class="job-company">Ekoland (Maspex Group), Tychy</div>
+        @if (isEnglish) {
+          <ul class="job-desc">
+            <li>Helpdesk: Provided face-to-face desktop and infrastructure support for corporate and production users.</li>
+            <li>Problem Management: Managed Active Directory, Prepared Windows computers for employees, Troubleshot hardware for employees and production</li>
+            <li>Documentation & Maintenance: Maintained network infrastructure documentation, managed and maintained physically server room equipment.</li>
+            <li>CCTV: Deployed, configured, and maintained hybrid monitoring systems, including physical network cabling installation.</li>
+            <li>Additional: Supported electric vehicle charging stations from an IT perspective.</li>
+          </ul>
+        }
+        @else {
+        <ul class="job-desc">
+          <li>Helpdesk: Udzielano wsparcia technicznego na miejscu pracy i infrastrukturze dla użytkowników korporacyjnych i produkcyjnych.</li>
+          <li>Zarządzanie problemami: Zarządzano Active Directory, przygotowywano komputery Windows dla pracowników, diagnozowano problemy sprzętowe u pracowników i produkcji</li>
+          <li>Dokumentacja i utrzymanie: Utrzymano dokumentację infrastruktury sieciowej, zarządzano i utrzymywano sprzęt w fizycznej sali serwerowej.</li>
+          <li>CCTV: Wdrażano, konfigurowano i utrzymywano hybrydowe systemy monitorowania, w tym instalację fizycznej kablowania sieciowego.</li>
+          <li>Dodatkowo: Wsparcie dla stacji ładowania samochodów elektrycznych z perspektywy IT.</li>
+        </ul>
+      }
+      </div>
+
       <div class="edu-item">
         <div class="job-header">
           <span class="job-title">{{ isEnglish ? "Computer Science — Bachelor's Degree" : "Informatyka — Tytuł Inżyniera" }}</span>
